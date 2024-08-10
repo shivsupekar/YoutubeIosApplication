@@ -25,6 +25,8 @@ class Model{
             if error != nil || data == nil {
                 return
             }
+            
+                //parsing the data into vedio object
         }
         
         //kick off the task
