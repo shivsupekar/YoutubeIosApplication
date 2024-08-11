@@ -6,7 +6,15 @@
 //
 
 import Foundation
+
+protocol ModelDelegate{
+    func videoFetched(_ videos:[Video])
+}
 class Model{
+    
+    var deligate:ModelDelegate?
+    
+    
     func getVedios(){
         //create an url object
         let url = URL(string: Constants.API_URL)
@@ -30,8 +38,14 @@ class Model{
                 //parsing the data into vedio object
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
-                let response =  try decoder.decode(Response.self, from: data!)
-                
+            let response =  try decoder.decode(Response.self, from: data!)
+               
+                if response.items != nil{
+                    DispatchQueue.main.async{
+                        self.deligate?.videoFetched( response.items!)
+                    }
+                    
+                }
                 dump(response)
             }
             catch{

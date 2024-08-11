@@ -1,8 +1,8 @@
 import Foundation
 
-struct Vedio: Decodable {
+struct Video: Decodable {
 
-    var vedioId = ""
+    var videoId = ""
     var title = ""
     var description = ""
     var thumbnail = ""
@@ -13,7 +13,7 @@ struct Vedio: Decodable {
         case thumbnails
         case high
         case resourceId
-        case vedioId = "videoId" // If the key in JSON is "videoId", use this
+        case videoId = "videoId" // If the key in JSON is "videoId", use this
         case title
         case description
         case thumbnail = "url"
@@ -31,7 +31,7 @@ struct Vedio: Decodable {
 
         // Decode the resourceId container for vedioId
         let resourceIdContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceId)
-        self.vedioId = try resourceIdContainer.decode(String.self, forKey: .vedioId)
+        self.videoId = try resourceIdContainer.decode(String.self, forKey: .videoId)
 
         // Decode the thumbnail
         let thumbnailContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnails)

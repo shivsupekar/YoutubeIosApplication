@@ -7,7 +7,7 @@
 
 import Foundation
 struct Response : Decodable{
-    var items:[Vedio]?
+    var items:[Video]?
    
     
     enum CodingKeys: CodingKey {
@@ -16,6 +16,6 @@ struct Response : Decodable{
     
     init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.items = try container.decodeIfPresent([Vedio].self, forKey: .items)
+        self.items = try container.decodeIfPresent([Video].self, forKey: .items)
     }
 }
