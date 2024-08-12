@@ -8,5 +8,6 @@ struct Constants {
     static var API_URL: String {
         return "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=\(Constants.PLAYLIST_ID)&key=\(Constants.API_KEY)"
     }
+    static var VIDEOCELL_ID="VideoCell"
 }
 

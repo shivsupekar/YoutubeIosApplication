@@ -20,13 +20,49 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCell" id="Qi5-Ac-J32">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCell" id="Qi5-Ac-J32" customClass="VideoTableViewCell" customModule="YoutubeIosApplication" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="299.66665649414062"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qi5-Ac-J32" id="aKu-Ve-xFX">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="299.66665649414062"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qfh-bv-Us7">
+                                                    <rect key="frame" x="20" y="20" width="353" height="259.66666666666669"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="UL7-KB-aan">
+                                                            <rect key="frame" x="0.0" y="0.0" width="353" height="198.66666666666666"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="UL7-KB-aan" secondAttribute="height" multiplier="1280:720" id="Bbk-pi-3xl"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYP-sD-dMb">
+                                                            <rect key="frame" x="0.0" y="208.66666666666666" width="353" height="20.333333333333343"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTD-lX-ubX">
+                                                            <rect key="frame" x="0.0" y="239" width="353" height="20.666666666666686"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="qfh-bv-Us7" secondAttribute="trailing" constant="20" id="5Dr-vZ-WYV"/>
+                                                <constraint firstAttribute="bottom" secondItem="qfh-bv-Us7" secondAttribute="bottom" constant="20" id="WhW-2B-9u7"/>
+                                                <constraint firstItem="qfh-bv-Us7" firstAttribute="leading" secondItem="aKu-Ve-xFX" secondAttribute="leading" constant="20" id="yKQ-NA-fvi"/>
+                                                <constraint firstItem="qfh-bv-Us7" firstAttribute="top" secondItem="aKu-Ve-xFX" secondAttribute="top" constant="20" id="zAj-xX-t1V"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="HTD-lX-ubX" id="W5H-hT-FU6"/>
+                                            <outlet property="thumbnailImageView" destination="UL7-KB-aan" id="dbP-ay-V9l"/>
+                                            <outlet property="titelLabel" destination="SYP-sD-dMb" id="xuz-Hh-ihq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
