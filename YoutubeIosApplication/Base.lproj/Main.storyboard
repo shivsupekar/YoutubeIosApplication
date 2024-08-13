@@ -18,34 +18,34 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Rdq-ik-red">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCell" id="Qi5-Ac-J32" customClass="VideoTableViewCell" customModule="YoutubeIosApplication" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="299.66665649414062"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCell" id="Qi5-Ac-J32" customClass="VideoTableViewCell" customModule="YoutubeIosApplication" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="282.66665649414062"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qi5-Ac-J32" id="aKu-Ve-xFX">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="299.66665649414062"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="282.66665649414062"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qfh-bv-Us7">
-                                                    <rect key="frame" x="20" y="20" width="353" height="259.66666666666669"/>
+                                                    <rect key="frame" x="20" y="19.999999999999986" width="322.66666666666669" height="242.66666666666663"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="UL7-KB-aan">
-                                                            <rect key="frame" x="0.0" y="0.0" width="353" height="198.66666666666666"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="181.66666666666666"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="UL7-KB-aan" secondAttribute="height" multiplier="1280:720" id="Bbk-pi-3xl"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYP-sD-dMb">
-                                                            <rect key="frame" x="0.0" y="208.66666666666666" width="353" height="20.333333333333343"/>
+                                                            <rect key="frame" x="0.0" y="191.66666666666666" width="322.66666666666669" height="20.333333333333343"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTD-lX-ubX">
-                                                            <rect key="frame" x="0.0" y="239" width="353" height="20.666666666666686"/>
+                                                            <rect key="frame" x="0.0" y="222" width="322.66666666666669" height="20.666666666666657"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" systemColor="systemGrayColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -58,17 +58,19 @@
                                                 <constraint firstItem="qfh-bv-Us7" firstAttribute="top" secondItem="aKu-Ve-xFX" secondAttribute="top" constant="20" id="zAj-xX-t1V"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="dateLabel" destination="HTD-lX-ubX" id="W5H-hT-FU6"/>
                                             <outlet property="thumbnailImageView" destination="UL7-KB-aan" id="dbP-ay-V9l"/>
                                             <outlet property="titelLabel" destination="SYP-sD-dMb" id="xuz-Hh-ihq"/>
+                                            <segue destination="Fqe-Fu-pwg" kind="show" id="x4S-f7-clT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rdq-ik-red" secondAttribute="bottom" id="LoO-to-Tz1"/>
                             <constraint firstItem="Rdq-ik-red" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NdX-K1-ay9"/>
@@ -82,12 +84,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="1"/>
+            <point key="canvasLocation" x="-657" y="-483"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="tmc-lf-vfA">
+            <objects>
+                <viewController id="Fqe-Fu-pwg" customClass="DetailViewController" customModule="YoutubeIosApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7I2-Xv-qlb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ya9-b6-srx">
+                                <rect key="frame" x="20" y="50" width="353" height="792"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXf-VX-RKA">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lF-AK-r0Q">
+                                        <rect key="frame" x="0.0" y="30.333333333333329" width="353" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiY-ck-XGF">
+                                        <rect key="frame" x="0.0" y="60.666666666666671" width="353" height="198.66666666666663"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="TiY-ck-XGF" secondAttribute="height" multiplier="1280:720" id="9Il-2S-wnV"/>
+                                        </constraints>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="247" verticalCompressionResistancePriority="747" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fcY-jy-jvV">
+                                        <rect key="frame" x="0.0" y="269.33333333333331" width="353" height="522.66666666666674"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2bI-Vq-nDH"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2bI-Vq-nDH" firstAttribute="bottom" secondItem="Ya9-b6-srx" secondAttribute="bottom" id="ARC-6t-9zN"/>
+                            <constraint firstItem="Ya9-b6-srx" firstAttribute="leading" secondItem="2bI-Vq-nDH" secondAttribute="leading" constant="20" id="FTV-da-2Pe"/>
+                            <constraint firstItem="2bI-Vq-nDH" firstAttribute="trailing" secondItem="Ya9-b6-srx" secondAttribute="trailing" constant="20" id="KoG-TD-FAd"/>
+                            <constraint firstItem="Ya9-b6-srx" firstAttribute="top" secondItem="2bI-Vq-nDH" secondAttribute="top" constant="50" id="x6y-fF-JS4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="U1l-w6-M7D"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="0lF-AK-r0Q" id="RhT-9R-uss"/>
+                        <outlet property="textView" destination="fcY-jy-jvV" id="ksA-jD-i3j"/>
+                        <outlet property="titleLabel" destination="vXf-VX-RKA" id="jlP-n0-xuh"/>
+                        <outlet property="webView" destination="TiY-ck-XGF" id="a9U-Ao-gHB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozm-Pl-JEJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155" y="-483"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
